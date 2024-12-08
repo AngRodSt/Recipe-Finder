@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder Favorites</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+
+</head>
+
+<body>
+    <nav class=" bg-purple-400  py-5 px-10">
+        <div class="container mx-auto flex justify-between">
+            <div>
+                <h1 class="text-3xl font-bold  text-purple-900"><a href="index.html">Recipe Finder</a></h1>
+            </div>
+            <button id="menu-button" class="md:hidden">
+                <svg fill="purple" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35"
+                    viewBox="0 0 50 50">
+                    <path
+                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z">
+                    </path>
+                </svg>
+            </button>
+            <div class="hidden md:flex">
+                <ul class="flex gap-5">
+                    <li class="text-2xl text-purple-100"><a class="hover:text-white" href="index.html">Inicio</a></li>
+                    <li class="text-2xl font-bold text-purple-900  "><a class="hover:text-white" href="">My
+                            Favorites</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div id="menu-element" class="hidden bg-purple-400 pb-4">
+        <ul class="gap-5 text-center">
+            <li class="text-2xl text-purple-100"><a class="hover:text-white" href="index.html">Inicio</a></li>
+            <li class="text-2xl font-bold text-purple-900  "><a class="hover:text-white" href="">My Favorites</a></li>
+        </ul>
+    </div>
+    <main class=" container mx-auto">
+        <h1 class="text-4xl text-center my-10 font-bold text-purple-900">Favorites</h1>
+        <div id="result" class="favorite mt-28 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4"></div>
+    </main>
+
+    <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3 font-bold" id="staticBackdropLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer flex justify-content-between">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-purple-700 text-white">
+                <strong class="me-auto text-white">Recipes App</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+            <div class="toast-body"></div>
+        </div>
+    </div>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="./js/index.js"></script>
+
+
+
+</html>
+
+</html>
